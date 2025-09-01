@@ -1,16 +1,13 @@
-//
-//  ContentView.swift
-//  griddyhub
-//
-//  Created by Zachary Tang on 25/8/25.
-//
-
 import SwiftUI
 import SwiftData
+
+
 
 struct ContentView: View {
     @State private var thing = 0
     var body: some View {
+        Text("Advertisement Space Up Here")
+            .navigationBarBackButtonHidden(true)
         NavigationStack{
             TabView{
                 Tab("Recieved", systemImage:
