@@ -1,23 +1,11 @@
 import SwiftUI
-import SwiftData
 
-struct TabberView: View {
-    @State private var thing = 0
+struct GontentView: View {
     var body: some View {
-        NavigationStack{
-            TabView{
-                Tab("Recieved", systemImage:
-                        "tray.and.arrow.down.fill") {
-                    GontentView()
-                }
-                Tab("Sent", systemImage:
-                        "tray.and.arrow.up.fill") {
-                    SomethingView()
-                }
-            }
-        }
+        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
     }
 }
-    #Preview {
-        TabberView()
-    }
+
+#Preview {
+    GontentView()
+}
