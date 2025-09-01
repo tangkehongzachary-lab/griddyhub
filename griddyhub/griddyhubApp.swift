@@ -25,7 +25,7 @@ struct griddyhubApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            SignView()
         }
         .modelContainer(sharedModelContainer)
     }
