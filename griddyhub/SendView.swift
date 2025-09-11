@@ -6,6 +6,7 @@ struct SendView: View {
     let specificString: String = "2ij8mhE"
 
     var body: some View {
+        Text("Sending system is down as of now")
         VStack {
             TextField("To", text: $inputText)
                 .textFieldStyle(RoundedBorderTextFieldStyle())
@@ -28,4 +29,6 @@ struct SendView: View {
 }
 #Preview {
     SendView()
+}
+
 }
