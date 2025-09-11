@@ -18,6 +18,14 @@ struct ContentView: View {
                         "tray.and.arrow.up.fill") {
                     SomethingView()
                 }
+                Tab("Send", systemImage:
+                        "square.and.arrow.up") {
+                    SendView()
+                }
+                Tab("Contacts", systemImage:
+                        "tray") {
+                    ContactView()
+                }
             }
         }
     }
