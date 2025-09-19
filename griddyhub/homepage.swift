@@ -1,13 +1,13 @@
 import SwiftUI
 
-struct GontentView: View {
+struct homepage: View {
     var body: some View {
-        List{
-            Text("Placeholder for nav link")
-            }
+
+        Text("Antivirus detected suspicious files (sussyfile)")
+            
         }
     }
 #Preview {
-    GontentView()
+    homepage()
 }
 
