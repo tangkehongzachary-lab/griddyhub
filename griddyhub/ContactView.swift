@@ -14,10 +14,10 @@ struct ChatMessage: Identifiable {
 
 struct ContactView: View {
     let contacts: [Contact] = {
-        let names = ["Aria", "Dante", "Elena", "Finn", "Greta", "Hugo", "Iris", "Juno", "Kai"]
+        let names = ["Joshua", "Danush", "Mr chua", "Mr yeo", "Kesler", "Kevin", "Kai"]
         var allNames = names
-        allNames.insert("Kesler", at: Int.random(in: 0...names.count))
-        return allNames.map { Contact(name: $0, isThief: $0 == "Kesler") }
+        allNames.insert("Mrs ross", at: Int.random(in: 0...names.count))
+        return allNames.map { Contact(name: $0, isThief: $0 == "Mrs ross") }
     }()
     
     var body: some View {
