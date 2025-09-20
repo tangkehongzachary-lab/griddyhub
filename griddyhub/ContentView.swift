@@ -17,10 +17,10 @@ struct ContentView: View {
             
             NavigationStack {
                 sussyfile()
-                    .navigationTitle("SussyFile")
+                    .navigationTitle("sussyfile.app")
             }
             .tabItem {
-                Label("sussyfile.exe", systemImage: "folder.fill")
+                Label("sussyfile.app", systemImage: "folder.fill")
             }
             
             NavigationStack {

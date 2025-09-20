@@ -10,7 +10,8 @@ import SwiftUI
 struct incoinvault: View {
     var body: some View {
         NavigationStack{
-            Text("Mrs Ross(accomplish), \"I was just trying to help my student\"")
+            NavigationLink("back",destination:sussyfile())
+            Text("Ms Ross(accomplice), \"someone framed me i didn't have this on my phone! 👁️👄👁️\"")
             Text("Then who is the culprit??")
                 .font(.largeTitle)
                 .fontWeight(.bold)
@@ -20,7 +21,9 @@ struct incoinvault: View {
                 .cornerRadius(15)
                 .italic()
             
-            NavigationLink("This was found on Mrs ross's phone(click to see)",destination:NextPage())
+            NavigationLink("This was found on Ms Ross's phone(click to see)",destination:NextPage())
+            
+          
             
             
         }
@@ -28,7 +31,7 @@ struct incoinvault: View {
     }
     struct NextPage: View {
         var body: some View {
-            Text("A encrypted message?")
+            Text("myxdohd (go figure idk)")
             Text("\n\n")
         }
         

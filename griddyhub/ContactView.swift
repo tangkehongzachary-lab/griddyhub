@@ -1,5 +1,6 @@
 import SwiftUI
 
+// MARK: - Models
 struct Contact: Identifiable, Hashable {
     let id = UUID()
     let name: String
@@ -14,10 +15,9 @@ struct ChatMessage: Identifiable {
 
 struct ContactView: View {
     let contacts: [Contact] = {
-        let names = ["Joshua", "Danush", "Mr chua", "Mr yeo", "Kesler", "Kevin", "Kai"]
-        var allNames = names
-        allNames.insert("Mrs ross", at: Int.random(in: 0...names.count))
-        return allNames.map { Contact(name: $0, isThief: $0 == "Mrs ross") }
+        let names = ["Joshua", "Danush", "Mr chua", "Mr yeo", "Kesler", "Kevin", "Kai", "Ms ross"]
+        let sortedNames = names.sorted() // case-sensitive sort
+        return sortedNames.map { Contact(name: $0, isThief: $0 == "Ms ross") }
     }()
     
     var body: some View {
@@ -29,11 +29,6 @@ struct ContactView: View {
             .navigationDestination(for: Contact.self) { contact in
                 ChatView(contact: contact)
             }
-            .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    Button("Add Contact") {}
-                }
-            }
         }
     }
 }
@@ -42,23 +37,26 @@ struct ChatView: View {
     let contact: Contact
     @State private var messages: [ChatMessage] = []
     @State private var inputText = ""
-    @State private var showSecret = false
-    
+    @State private var showGawkGawk = false
+    @State private var showGawkgwak = false
+
     var body: some View {
         VStack {
             List(messages) { message in
                 HStack {
-                    if message.sender == contact.name {
-                        if contact.isThief && message.text == "Hello" {
-                            Text("\(message.sender): \(message.text)")
-                                .contextMenu {
-                                    Button("shewasafairy") {
-                                        showSecret = true
+                    if message.sender == contact.name && message.text == "Hello" {
+                        Text("\(message.sender): \(message.text)")
+                            .contextMenu {
+                                Button("shewasafairy") {
+                                    if contact.isThief {
+                                        showGawkGawk = true // Mrs ross → GawkGawkView
+                                    } else {
+                                        showGawkgwak = true // Everyone else → GawkgwakView
                                     }
                                 }
-                        } else {
-                            Text("\(message.sender): \(message.text)")
-                        }
+                            }
+                    } else if message.sender == contact.name {
+                        Text("\(message.sender): \(message.text)")
                     } else {
                         Text("You: \(message.text)")
                     }
@@ -80,10 +78,16 @@ struct ChatView: View {
         }
         .navigationTitle(contact.name)
         .onAppear {
-            messages.append(ChatMessage(sender: contact.name, text: "Hello"))
+            if messages.isEmpty {
+                messages.append(ChatMessage(sender: contact.name, text: "Hello"))
+            }
         }
-        .sheet(isPresented: $showSecret) {
+        // Present the correct view based on contact
+        .sheet(isPresented: $showGawkGawk) {
             GawkGawkView()
+        }
+        .sheet(isPresented: $showGawkgwak) {
+            GawkgwakView()
         }
     }
 }
