@@ -15,8 +15,8 @@ struct ChatMessage: Identifiable {
 
 struct ContactView: View {
     let contacts: [Contact] = {
-        let names = ["Joshua", "Danush", "Mr chua", "Mr yeo", "Kesler", "Kevin", "Kai", "Ms ross"]
-        let sortedNames = names.sorted() // case-sensitive sort
+        let names = ["Joshua (shvvn)", "Dhanush", "Mr Chua", "Mr Yeo", "Kesler", "Kevin", "Kai", "Ms Ross"]
+        let sortedNames = names.sorted()
         return sortedNames.map { Contact(name: $0, isThief: $0 == "Ms ross") }
     }()
     
