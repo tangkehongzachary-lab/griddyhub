@@ -14,7 +14,7 @@ struct GawkgwakView: View {
     var body: some View {
         NavigationStack {
             VStack(spacing: 15) {
-                Text("🔒 Hidden Clues 🔒")
+                Text("whats ths?")
                     .font(.title)
                 
                 LazyVGrid(columns: Array(repeating: GridItem(.flexible(), spacing: 10), count: 4), spacing: 10) {

@@ -3,18 +3,18 @@ import SwiftUI
 struct GawkGawkView: View {
     @Environment(\.dismiss) var dismiss
     
-    // 4 clue buttons with their text
+    // Clue button positions and text (fixed at 5, 6, 9, 10)
     let clueButtons: [Int: String] = [
-        2: "Clue 1: 3rd digit of Marina Bay Sands opening year + towers.(+4)",
-        7: "Clue 2: OCBC Centre floors - Raffles City towers.(+7)",
-        11: "Clue 3: 3rd digit of Esplanade Theatre year - Merlion statues.(times 2)",
-        16: "Clue 4: Letters in 'Singapore Flyer'(-4)."
+        5: "Clue 1: 3rd digit of Marina Bay Sands opening year + towers.(+4)",
+        6: "Clue 2: OCBC Centre floors - Raffles City towers.(+7)",
+        9: "Clue 3: 3rd digit of Esplanade Theatre year - Merlion statues.(times 2)",
+        10: "Clue 4: Letters in 'Singapore Flyer'(-4)."
     ]
     
     var body: some View {
         NavigationStack {
             VStack(spacing: 15) {
-                Text("🔒 Hidden Clues 🔒")
+                Text("whats this?")
                     .font(.title)
                 
                 LazyVGrid(columns: Array(repeating: GridItem(.flexible(), spacing: 10), count: 4), spacing: 10) {

@@ -17,7 +17,7 @@ struct ContactView: View {
     let contacts: [Contact] = {
         let names = ["Joshua (shvvn)", "Dhanush", "Mr Chua", "Mr Yeo", "Kesler", "Kevin", "Kai", "Ms Ross"]
         let sortedNames = names.sorted()
-        return sortedNames.map { Contact(name: $0, isThief: $0 == "Ms ross") }
+        return sortedNames.map { Contact(name: $0, isThief: $0 == "Ms Ross") }
     }()
     
     var body: some View {

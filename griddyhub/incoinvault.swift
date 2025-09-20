@@ -12,7 +12,7 @@ struct incoinvault: View {
         NavigationStack{
             NavigationLink("back",destination:sussyfile())
             Image("INCoins")
-                .frame(width: 200, height: 400)
+                .frame(width: 150, height: 400)
             Text("Ms Ross(accomplice), \"someone framed me,I didn't do it! I was just trying to help a student! 👁️👄👁️\"")
             Text("Then who is the culprit??")
                 .font(.largeTitle)
@@ -33,7 +33,7 @@ struct incoinvault: View {
     }
     struct NextPage: View {
         var body: some View {
-            Text("(Is this a cipher?)")
+            Text("whats this?")
             Text("\n myxdohd ")
                 .font(.largeTitle)
                 .fontWeight(.bold)
