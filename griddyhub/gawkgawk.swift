@@ -5,10 +5,10 @@ struct GawkGawkView: View {
     
     // 4 clue buttons with their text
     let clueButtons: [Int: String] = [
-        2: "Clue 1: 3rd digit of Marina Bay Sands opening year + towers.",
-        7: "Clue 2: OCBC Centre floors - Raffles City towers.",
-        11: "Clue 3: 3rd digit of Esplanade Theatre year - Merlion statues.",
-        16: "Clue 4: Letters in 'Singapore Flyer' ÷ 2."
+        2: "Clue 1: 3rd digit of Marina Bay Sands opening year + towers.(+4)",
+        7: "Clue 2: OCBC Centre floors - Raffles City towers.(+7)",
+        11: "Clue 3: 3rd digit of Esplanade Theatre year - Merlion statues.(times 2)",
+        16: "Clue 4: Letters in 'Singapore Flyer'(-4)."
     ]
     
     var body: some View {

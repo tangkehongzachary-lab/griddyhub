@@ -14,7 +14,7 @@ struct sussyfile: View {
                     .padding()
                 
                 Button("Unlock") {
-                    if code == "1234" { // vault code
+                    if code == "5960" { // vault code
                         unlocked = true
                     } else if code == "Context" { // secret code
                         whoa = true
