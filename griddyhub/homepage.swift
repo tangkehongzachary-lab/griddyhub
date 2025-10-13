@@ -5,6 +5,7 @@ struct homepage: View {
 
         Text("Antivirus detected suspicious files (sussyfile)")
         Text("\"dont leave any stone unturned\" -rayson ng 2025")
+        Text("plz go get a paper in case")
             
         }
     }
