@@ -11,7 +11,7 @@ struct secret: View {
                     .font(.subheadline)
             }
             HStack {
-                Text("2500 Incoin deposited from Mrs ross to Kesler")
+                Text("3500 Incoin deposited from Mrs ross to Kesler")
                 Spacer()
                 Text("8:05 AM")
                     .foregroundColor(.gray)
